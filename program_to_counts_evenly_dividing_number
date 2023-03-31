@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Divcount{
+public static int evenlydivides(int n)
+{
+int temp=n,digits;
+int count=0;
+while(temp>0){
+digits=temp%10;
+if(n%digits==0){
+count=count+1;
+temp=temp/10;
+}
+
+}
+return count;
+}
+public static void main(String args[]){
+System.out.println("enter the number");
+Scanner a=new Scanner(System.in);
+int n=a.nextInt();
+System.out.println(evenlydivides(n)); 
+}
+}
